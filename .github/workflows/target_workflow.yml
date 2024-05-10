@@ -1,0 +1,12 @@
+name: Target Workflow
+
+on:
+  repository_dispatch:
+    types: [trigger_event]
+
+jobs:
+  target_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "This workflow was triggered by Repository A."
